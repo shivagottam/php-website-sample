@@ -1,0 +1,13 @@
+tasks:
+  php-job:
+    runner: sonarsource/sonar-scanner-cli
+    steps:
+   
+    - checkout    
+    - commands:
+      - |
+        sonar-scanner \
+         -Dsonar.projectKey=php \
+         -Dsonar.sources=. \
+         -Dsonar.host.url=http://13.233.126.85:9000 \
+         -Dsonar.login=c08e66d14ac55fe8d79ed96aed0aa2ceba8aca80
